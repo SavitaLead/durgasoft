@@ -3,10 +3,12 @@ package durgasoft;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 import org.testng.annotations.Test;
 
@@ -568,7 +570,7 @@ public class JavaPrograms {
 	}
 	
 	@Test
-	public void List() {
+	public void P27_List() {
 		//List implements collectin interface
 		//List allows duplicate elements 
 		//LIST allows null values
@@ -661,6 +663,76 @@ public class JavaPrograms {
 		
 		//ARRAYLIST : itrate faster than linkedList
 		//LINKEDLIST : itrate slower than Arraylist
+		
+	}
+	
+	@Test
+	public void P28_Set() {
+		// TODO Auto-generated method stub
+		//it will not allow duplicate values to add 
+		//Set interface which extends the collection interface
+		//Set Classes do not allow duplicate elements
+		//Set Classes := 1.HashSet(Random order),2.TreeSet(Ascending order),3.LinkedHashSet(Maintains the insertion order),
+		//Set is not an indexed based ,in order to retrive the elements iterator class needs to be used
+		
+		//Hashset is not ordered or sorted ie random
+		HashSet<String> hs=new HashSet<String>();
+		
+		hs.add("india");
+		hs.add("paksitan");
+		hs.add("singapore");
+		hs.add("bangladesh");
+		hs.add("austrlia");
+		
+		
+		//retrive the elements using the for each,Enumaration and Iterator
+		/*for(Object ele:hs){
+			System.out.println("it prints the elements in random order::"+ele);
+		}*/
+		
+		//2.Iterator ,
+		//Iterator class is a unidirectional(only forward direction)
+		//And it works for all the collection classes
+		//it has three methods 1.hasnext(),2.next(),3.remove
+		
+		Iterator<String> it=hs.iterator();
+		while(it.hasNext()){
+			System.out.println(it.next());
+		}
+		
+		//-----------------end of hashSet example---------------------
+		
+		LinkedHashSet<String> lhs=new LinkedHashSet();
+		//LinkedHashSet is maintains the insertion order
+		lhs.add("india");
+		lhs.add("paksitan");
+		lhs.add("singapore");
+		lhs.add("bangladesh");
+		lhs.add("austrlia");
+		
+		Iterator<String> it1=lhs.iterator();
+		
+		while(it1.hasNext()){
+			System.out.println("LinkedHashSet maintainsthe insertion order:+"+it1.next());
+		}
+		
+		//-----------------end of LinkedHashSet example---------------------
+		TreeSet<String> ts=new TreeSet();
+		//TreeSet maintains the insertion order
+		ts.add("india");
+		ts.add("paksitan");
+		ts.add("singapore");
+		ts.add("bangladesh");
+		ts.add("austrlia");
+		
+		for(Object ele1:ts){
+			System.out.println(ele1);
+		}
+		
+		Iterator<String> it3=ts.iterator();
+		while(it3.hasNext()){
+			System.out.println("It sorts in ascending order TreeSet:="+it3.next());
+		}
 		
 	}
 	
