@@ -564,21 +564,7 @@ public class JavaPrograms {
 		
 	}
 	
-	@Test
-	public void P27_SmallestElementOfArray() {
-		//Find the largest element of an array in an array
-		int[] arr = {10,20,30,40,50,60,70,9,8,7,6,5};
-		int smallest = arr[0];
-		
-		System.out.print("smallest element of an array is : ");
-		
-		for(int i=1;i<=arr.length-1;i++) {
-			if(arr[i]<smallest)
-				smallest = arr[i];
-		}
-		
-		System.out.println(smallest);
-	}
+	
 }
 
 
