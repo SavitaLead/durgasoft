@@ -1,6 +1,10 @@
 package durgasoft;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -563,6 +567,102 @@ public class JavaPrograms {
 		
 	}
 	
+	@Test
+	public void List() {
+		//List implements collectin interface
+		//List allows duplicate elements 
+		//LIST allows null values
+		//LIST classes are 1.ArrayLIst,2.LinkedList 3.Vector
+		//LIST is indexed based
+		//LIST retrive the elements the randomly,since it is index based
+		
+		
+		ArrayList al=new ArrayList();
+		
+		al.add("india");
+		al.add("paksitan");
+		al.add("singapore");
+		al.add("bangladesh");
+		al.add("austrlia");
+		
+		System.out.println(al.size());
+		//System.out.println(al.get(4));
+		
+		
+	//	al.set(1,"sweden");//it replaces the element at the index 1 with new value as sweden
+		
+		Iterator it=al.iterator();
+		
+		while(it.hasNext()){
+			
+			System.out.println(it.next());
+		}
+		
+		System.out.println(al.contains("India")); //false,it searches in the entire list and returns boolen value
+		System.out.println(al.contains("india")); //true
+		
+		
+		System.out.println(al.indexOf("Singapore")); //elemnt not fond returns -1
+		System.out.println(al.indexOf("singapore"));
+		//-------------------------------ARRAYLIST-----------------------------------------
+		
+		
+		//LinkedList implements LIST and QUEUE interface
+		//It is also indexed based
+		//In LinkedLIst we can add null and duplicate elements
+		//LinkedList uses circular linked list data structure algorithm to store the elemnts
+		//So the linkedLIst is FAST when we are adding the elements in between
+		//LinkedList class provides four methods addFirst(),addLast(),getFirst(),getLast()
+		
+		
+		LinkedList ls=new LinkedList();
+		
+		ls.add("france");
+		ls.add("norway");
+		ls.add("netherlands");
+		ls.add("amesterderm");
+		ls.add("finland");
+		
+		
+		Iterator it1=ls.iterator();
+		
+		/*while(it1.hasNext()){
+			
+			System.out.println(it1.next());
+		}*/
+		
+				
+		ListIterator it2=ls.listIterator();
+		
+		while(it2.hasNext()){
+			System.out.println("Listinterface forward direction::="+it2.next());
+		}
+		
+		while(it2.hasPrevious()){
+			System.out.println("Listinterface backward direction::="+it2.previous());
+		}
+		
+		
+		//-------------------------------LINKEDLIST-----------------------------
+		
+		//VECTOR
+		//Vector is similar to Arraylist,but all the methods of vector class are synchronised,
+		//hence its thread safe
+		//Vector is a legacy class,its available since JAVA 1.0 release
+		
+		
+		//DIFFERENCE BETWEEN ARRAYLIST AND LINKEDLIST
+		
+		//ARRAYLIST :implements lIST interface
+		//LINKEDLIST : implements LIST and QUEUE interface
+		
+		//ARRAYLIST : is fast if we are adding or removing the elements at the end.
+		//LINKEDLIST :is fast if we are adding the elements in between
+		
+		//ARRAYLIST : itrate faster than linkedList
+		//LINKEDLIST : itrate slower than Arraylist
+		
+	}
 	
 }
 
