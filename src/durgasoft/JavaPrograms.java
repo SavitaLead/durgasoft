@@ -853,6 +853,15 @@ public class JavaPrograms {
 		System.out.println(name.contains("fine"));         // returns false  
 	}
 	
+	@Test
+	public void P40_StringContainsMethod(){
+		String s1="Welcome to Edureka";
+		char[] ch=s1.toCharArray();
+		for(int i=0;i<ch.length;i++){
+		System.out.print(ch[i]);
+	}
+	
+}
 }
 
 
