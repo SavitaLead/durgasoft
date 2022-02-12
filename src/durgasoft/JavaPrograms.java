@@ -817,6 +817,20 @@ public class JavaPrograms {
         System.out.println(s);     //Output : 2015
     }
 	
+	@Test
+	public void P37_ReverseOfStringWithoutReverseMethod() {
+		//reverse a string in Java without using the reverse method
+        String name = "GauravKukade";
+        String reversedString = "";
+ 
+        for (int i = name.length() - 1; i >= 0; i--) {
+            reversedString = reversedString + name.charAt(i);
+        }
+ 
+        System.out.print("The reversed string of the '" + name + "' is: ");
+        System.out.println(reversedString);
+    }
+	
 }
 
 
