@@ -792,6 +792,31 @@ public class JavaPrograms {
         System.out.println(i);          //Output : 2015
     }
 	
+	@Test
+	public void P34_ConvertStringToInteger()
+    {
+        String s = "2015";
+        int i = Integer.valueOf(s);
+        System.out.println(i);          //Output : 2015
+    }
+	
+	
+	@Test
+	public void P35_ConvertIntegerToString()
+    {
+		int i = 2015;
+        String s = Integer.toString(i);
+        System.out.println(s);     //Output : 2015
+    }
+	
+	@Test
+	public void P36_ConvertIntegerToString()
+    {
+		int i = 2015;
+        String s = String.valueOf(i);
+        System.out.println(s);     //Output : 2015
+    }
+	
 }
 
 
