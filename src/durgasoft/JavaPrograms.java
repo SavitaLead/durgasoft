@@ -728,17 +728,39 @@ public class JavaPrograms {
 	
 	@Test
 	public static void P29_ConcatStrings() {
+		
+		//Program to concatenate the two strings
 	    // create first string
-	    String first = "Java ";
+		Scanner scr = new Scanner(System.in);
+	    String first =scr.nextLine();
 	    System.out.println("First String: " + first);
-
+	    
+	    Scanner scr1 = new Scanner(System.in);
 	    // create second
-	    String second = "Programming";
+	    String second = scr1.nextLine();
 	    System.out.println("Second String: " + second);
 
 	    // join two strings
 	    String joinedString = first.concat(second);
 	    System.out.println("Joined String: " + joinedString);
+	    
+	  }
+	
+	@Test
+	public void P30_CompareTwoStringsEqualsMethod() {
+
+	    // create 3 strings
+	    String first = "java programming";
+	    String second = "java programming";
+	    String third = "python programming";
+
+	    // compare first and second strings
+	    boolean result1 = first.equals(second);
+	    System.out.println("Strings first and second are equal: " + result1);
+
+	    // compare first and third strings
+	    boolean result2 = first.equals(third);
+	    System.out.println("Strings first and third are equal: " + result2);
 	  }
 	
 }
