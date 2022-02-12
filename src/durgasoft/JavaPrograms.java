@@ -845,6 +845,13 @@ public class JavaPrograms {
 	        }
 	        System.out.println("The character '" + ch + "' found " + count + " times in a string '" + inputString + "'.");
 	    }
+	@Test
+	public void P39_StringContainsMethod(){ 
+		String name=" hello how are you doing"; 
+		System.out.println(name.contains("how are you"));  // returns true
+		System.out.println(name.contains("hello"));        // returns true  
+		System.out.println(name.contains("fine"));         // returns false  
+	}
 	
 }
 
