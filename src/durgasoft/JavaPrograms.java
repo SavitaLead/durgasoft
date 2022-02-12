@@ -779,9 +779,17 @@ public class JavaPrograms {
     {	
 		//program to count the total number of occurrences of a given character in a string without using any loop
         String s = "Java is java again java again";
-        char c = 'a';
+       //char c = 'a';
         int count = s.length() - s.replace("a", "").length();
         System.out.println("Number of occurances of 'a' in "+s+" = "+count);
+    }
+	
+	@Test
+	public void P33_ConvertStringToInteger()
+    {
+        String s = "2015";
+        int i = Integer.parseInt(s);
+        System.out.println(i);          //Output : 2015
     }
 	
 }
