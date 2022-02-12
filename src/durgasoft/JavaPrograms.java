@@ -784,6 +784,7 @@ public class JavaPrograms {
         System.out.println("Number of occurances of 'a' in "+s+" = "+count);
     }
 	
+	
 	@Test
 	public void P33_ConvertStringToInteger()
     {
@@ -830,6 +831,20 @@ public class JavaPrograms {
         System.out.print("The reversed string of the '" + name + "' is: ");
         System.out.println(reversedString);
     }
+	
+	@Test
+	 public void P38_CountNoOfOccurancesStringWay2() {
+		    String inputString = "coderolls";
+	        char ch = 'o';
+	        int count = 0;
+	 
+	        for (int i = 0; i < inputString.length(); i++) {
+	            if (inputString.charAt(i) == ch) {
+	                count++;
+	            }
+	        }
+	        System.out.println("The character '" + ch + "' found " + count + " times in a string '" + inputString + "'.");
+	    }
 	
 }
 
