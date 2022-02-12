@@ -763,6 +763,7 @@ public class JavaPrograms {
 	    System.out.println("Strings first and third are equal: " + result2);
 	  }
 	
+	@Test
 	public void P31_NoOfWordsString() 
     {	
 		//program to count the number of words in a string?
@@ -771,6 +772,16 @@ public class JavaPrograms {
         String s=sc.nextLine();
         String[] words = s.trim().split(" ");
         System.out.println("Number of words in the string = "+words.length);
+    }
+	
+	@Test
+	public void P32_CountNoOfOccurancesString()
+    {	
+		//program to count the total number of occurrences of a given character in a string without using any loop
+        String s = "Java is java again java again";
+        char c = 'a';
+        int count = s.length() - s.replace("a", "").length();
+        System.out.println("Number of occurances of 'a' in "+s+" = "+count);
     }
 	
 }
